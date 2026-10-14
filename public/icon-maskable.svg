@@ -1,0 +1,60 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" width="512" height="512">
+  <defs>
+    <!-- Background Sunny Gradient full-bleed -->
+    <linearGradient id="bgGradMask" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" stop-color="#B7D9F6" />
+      <stop offset="50%" stop-color="#D9EAFB" />
+      <stop offset="100%" stop-color="#FBEACB" />
+    </linearGradient>
+
+    <!-- Warm Golden Sun -->
+    <radialGradient id="sunCoreMask" cx="35%" cy="35%" r="65%">
+      <stop offset="0%" stop-color="#FFF7D6" />
+      <stop offset="40%" stop-color="#FFD13B" />
+      <stop offset="85%" stop-color="#FFA000" />
+      <stop offset="100%" stop-color="#F57C00" />
+    </radialGradient>
+    <radialGradient id="sunGlowMask" cx="50%" cy="50%" r="50%">
+      <stop offset="0%" stop-color="#FFE082" stop-opacity="0.8" />
+      <stop offset="60%" stop-color="#FFCA28" stop-opacity="0.3" />
+      <stop offset="100%" stop-color="#FFB300" stop-opacity="0" />
+    </radialGradient>
+
+    <!-- 3D Liquid Cloud Gradient -->
+    <linearGradient id="cloudFrontMask" x1="20%" y1="0%" x2="80%" y2="100%">
+      <stop offset="0%" stop-color="#FFFFFF" />
+      <stop offset="45%" stop-color="#F1F5F9" />
+      <stop offset="90%" stop-color="#CBD5E1" />
+      <stop offset="100%" stop-color="#94A3B8" />
+    </linearGradient>
+
+    <filter id="shadowFilterMask" x="-20%" y="-20%" width="140%" height="140%">
+      <feDropShadow dx="0" dy="12" stdDeviation="10" flood-opacity="0.2" flood-color="#1E3A8A" />
+    </filter>
+  </defs>
+
+  <!-- Full-bleed background for maskable icon -->
+  <rect width="512" height="512" fill="url(#bgGradMask)" />
+
+  <!-- Content scaled and centered within 80% safe zone (center at 256, 256) -->
+  <g transform="translate(64, 64) scale(0.75)" filter="url(#shadowFilterMask)">
+    <!-- Sun Behind Cloud -->
+    <g transform="translate(40, -10)">
+      <circle cx="280" cy="180" r="105" fill="url(#sunGlowMask)" />
+      <circle cx="280" cy="180" r="76" fill="url(#sunCoreMask)" />
+      <ellipse cx="255" cy="155" rx="28" ry="18" fill="#FFFFFF" opacity="0.6" transform="rotate(-20 255 155)" />
+      <ellipse cx="240" cy="145" rx="10" ry="7" fill="#FFFFFF" opacity="0.85" />
+    </g>
+
+    <!-- Cloud Foreground -->
+    <g transform="translate(10, 30)">
+      <path
+        d="M170 340 H360 C395 340 420 312 420 280 C420 250 398 226 368 222 C362 178 324 146 278 146 C240 146 208 168 194 200 C184 196 172 194 160 194 C126 194 98 222 98 258 C98 304 125 340 170 340 Z"
+        fill="url(#cloudFrontMask)"
+      />
+      <!-- Specular Cloud Highlights -->
+      <ellipse cx="278" cy="174" rx="48" ry="18" fill="#FFFFFF" opacity="0.8" />
+      <ellipse cx="170" cy="225" rx="34" ry="14" fill="#FFFFFF" opacity="0.7" />
+    </g>
+  </g>
+</svg>

@@ -1,0 +1,6 @@
+{
+  "name": "Glass Weather",
+  "description": "A mobile-first weather web app with a Google × Liquid Glass aesthetic, real-time Open-Meteo forecasts, RainViewer radar map, and fluid weather mood gradients.",
+  "requestFramePermissions": ["geolocation"],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}
